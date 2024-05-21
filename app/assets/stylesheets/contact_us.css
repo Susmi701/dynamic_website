@@ -1,0 +1,39 @@
+label{
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+}
+.drp-dwn{
+
+    width: 100%;
+    margin: 20px 0;
+}
+#enquiry_country{
+    height: 45px;
+    width: 100%;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 200px;
+    font-size: 20px;
+   
+}
+.text-area{
+   
+    width: 100%;
+    margin: 20px 0;
+}
+.text-area textarea{
+    width: 275px;
+}
+main section{
+    padding: 30px;
+}
+#main_contact_us{
+    background-image: url("https://img.freepik.com/free-photo/top-view-blue-monday-concept-composition-with-telephone_23-2149139102.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: row;
+}

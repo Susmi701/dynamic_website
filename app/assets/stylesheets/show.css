@@ -1,0 +1,42 @@
+#main_prof{
+    background-color: #f1ebe3;
+}
+.prof{
+display: flex;
+flex-wrap:wrap;
+flex-direction: row;
+padding: 30px;
+box-shadow: 0 0 15px black;
+margin: 30px;
+background-color: white;
+
+}
+.prof-sub{
+display: flex;
+flex-direction: row;
+gap: 188px;
+font-size: 23px;
+flex-wrap: wrap;
+row-gap: 20px;
+}
+.prof-main{
+flex-wrap: wrap;
+flex-direction: column;
+padding-left: 30px;
+font-size: 25px;
+
+}
+#article_about_us{
+    font-size: 18px;
+    padding: 10px;
+    box-shadow: 0 0 15px black;
+    margin: 30px;
+    background-color: white;
+    
+}
+article h3{
+    font-size: 25px;
+}
+#view-address{
+    flex-wrap: wrap;
+}

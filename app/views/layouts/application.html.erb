@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sample</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag '/main.css' %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+  <header>
+  <h1>Lorem</h1>
+    </header>
+    <nav> 
+                <%= link_to "Home", root_path %>
+                <%= link_to "About Us",  aboutus_path %>
+                <%= link_to "Contact Us",  new_enquiry_path %>
+                <%= link_to "Login",  login_path %>
+                <%= link_to "Dashboard",  users_path %>
+                <%= link_to "Create User",  new_user_path %>
+    </nav>
+    
+    <% flash.each do |name, msg| %>
+      <%= msg %>
+    <% end %>
+
+    <%= yield %>
+
+    <footer>
+    <figure>
+        <img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/06-facebook-512.png" alt="" style="height: 34px; width: 42px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="" style="height: 31px; width: 31px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/152/152810.png" alt=""style="height: 36px; width: 38px;">
+        <img src="https://cdn-icons-png.freepik.com/256/11662/11662829.png?semt=ais_hybrid" alt=""style="height: 32px; width: 32px;">
+        <img src="https://image.similarpng.com/very-thumbnail/2021/01/Linkedin-icon-design-premium-vector-PNG.png" alt=""style="height: 29px; width: 30px;">
+    </figure>
+    <h5 >
+        Copyright@2024 Susmi
+    </h5>
+</footer>
+  </body>
+</html>

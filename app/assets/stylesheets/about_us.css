@@ -1,0 +1,33 @@
+#main-aboutus{
+    background-color: bisque;
+    display: flex;
+    text-align: center;
+   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl2W7ouQRWUx7FWmYXTeIyY-soEe7W-9Yidhlwhoslnbl69X12Ge9z-NBmzzjlk9R3tXg&usqp=CAU");
+   background-repeat: no-repeat;
+   background-size: cover;
+   } 
+  #section_about_us{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 155px;
+      justify-content: center;
+    
+  }
+  
+   img{
+     width: 122px; 
+     height: 108px;
+  }
+  .about-article{
+      width: 200px;
+      height: 300px;
+  }
+  
+  #about_us_h2{
+  padding: 90px;
+  font-size: 54px;
+  bottom: 1px;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  }

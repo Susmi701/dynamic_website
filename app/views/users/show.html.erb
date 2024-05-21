@@ -1,0 +1,29 @@
+<main id="main_prof">
+<section>
+    <section class="prof">
+        <img src="https://media.istockphoto.com/id/1437816897/photo/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring.webp?b=1&s=170667a&w=0&k=20&c=YQ_j83pg9fB-HWOd1Qur3_kBmG_ot_hZty8pvoFkr6A=" alt="" style="height: 250px; width: 350px;">
+            <div class="prof-main">
+                <h2><%= "#{@user.first_name} " " #{@user.last_name}" %></h2>
+                <div class="prof-sub">
+                    <div >
+                        <h6>Role</h6>
+                        <p><%= @user.role %></p>
+                    </div>
+                    <div >
+                        <h6>PhoneNumber</h6>
+                        <p><%= @user.phone_number %></p>
+                    </div>
+                    <div>
+                        <h6>DOB</h6>
+                        <p><%= @user.dob %></p>
+                    </div>
+                </div>
+            </div> 
+</section>
+<article id="article_about_us">
+<h3>Bio</h3>
+<p><%= @user.bio %></p>
+</article>
+</section>
+ 
+</main>

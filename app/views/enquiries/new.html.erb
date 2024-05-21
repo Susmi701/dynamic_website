@@ -1,0 +1,66 @@
+<%= stylesheet_link_tag '/form.css' %>
+<main id="main_contact_us">
+    <section class="contact">
+        <div class="box">
+            <div class="contact-icon"></div>
+            <div class="text">
+                <h3>Address</h3>
+                <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing.</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="contact-icon"></div>
+            <div class="text">
+                <h3>Phone</h3>
+                <p>123-123-456-678</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="contact-icon"></div>
+            <div class="text">
+                <h3>Email</h3>
+                <p>newaddress@mailnator.com</p>
+            </div>
+        </div>
+        </section>
+        <section class="container">
+        
+        <%= form_with  scope: :enquiry,url: enquiries_path ,local: true do |f| %>
+            <div class="text">
+                Send Message
+            </div>
+                <div class="data">
+                    <%= f.label :name %></br>
+                    <%= f.text_field :name %>
+                    <% @enquiry.errors.full_messages_for( :name).each do |message| %>
+                        <div class="error-message"><%= message %></div>
+                    <% end %>
+                </div>
+
+                <div class="data">
+                    <%= f.label :email %></br>
+                    <%= f.email_field :email %>
+                    <% @enquiry.errors.full_messages_for( :email).each do |message| %>
+                        <div class="error-message"><%= message %></div>
+                    <% end %>
+                </div>
+
+                <div class="drp-dwn">
+                    <%= f.label :country %></br>
+                    <%= f.select :country, options_for_select(["Afghanistan", "Bangladesh", "Canada", "France", "Germany", "India"]), include_blank: true %>    
+                </div>
+
+                <div class="text-area">
+                    <%= f.text_area :message, placeholder: "Message..." %>
+                    <% @enquiry.errors.full_messages_for( :message).each do |message| %>
+                        <div class="error-message"><%= message %></div>
+                    <% end %>
+                </div>
+
+                <div class="btn">
+                    <%=  f.submit "Send" %>
+                </div>
+
+        <% end %>
+    </section>               
+</main>            
