@@ -1,63 +1,80 @@
-<div class="data">
-                    <%= f.label :password %></br>
-                    <%= f.text_field :password %>
-                    <% @user.errors.full_messages_for( :password).each do |message| %>
+               
+    <%= form_with model: @user do |f| %>  
+                <div class="data">
+                    <%= f.label :username %> </br>
+                    <%= f.text_field :username  %>
+                    <% @user.errors.full_messages_for( :username).each do |message| %>
                         <div class="error-message"><%= message %></div>
                       <% end %>
                 </div> 
                 
                 <div class="data">
-                    <%= f.label :first_name %></br>
-                    <%= f.text_field :first_name %>
-                    <% @user.errors.full_messages_for( :first_name).each do |message| %>
-                        <div class="error-message"><%= message %></div>
-                      <% end %>
-                </div>  
-
-                <div class="data">
-                    <%= f.label :last_name %></br>
-                    <%= f.text_field :last_name %>
-                    <% @user.errors.full_messages_for( :last_name).each do |message| %>
-                        <div class="error-message"><%= message %></div>
-                      <% end %>
-                </div> 
-
-                <div class="data">
-                    <%= f.label :phone_number %></br>
-                    <%= f.text_field :phone_number %>
-                    <% @user.errors.full_messages_for( :phone_number).each do |message| %>
-                        <div class="error-message"><%= message %></div>
-                      <% end %>
-                </div> 
-                             
-                <div class="data">
-                    <%= f.label :address %></br>
-                    <%= f.text_field :address %>
-                    <% @user.errors.full_messages_for( :address).each do |message| %>
-                        <div class="error-message"><%= message %></div>
-                      <% end %>
-                </div> 
-
-                <div class="data">
-                <%= f.label :dob %></br>
-                <%= f.date_select :dob, start_year: Date.today.year - 100, end_year: Date.today.year %>
-                <% @user.errors.full_messages_for( :dob).each do |message| %>
+                <%= f.label :password %></br>
+                <%= f.text_field :password %>
+                <% @user.errors.full_messages_for( :password).each do |message| %>
                     <div class="error-message"><%= message %></div>
                   <% end %>
-                </div> 
+            </div> 
+            
+            <div class="data">
+                <%= f.label :first_name %></br>
+                <%= f.text_field :first_name %>
+                <% @user.errors.full_messages_for( :first_name).each do |message| %>
+                    <div class="error-message"><%= message %></div>
+                  <% end %>
+            </div>  
 
-                <div class="data">
-                    <%= f.label :role %></br>
-                    <%= f.text_field :role %>
-                    <% @user.errors.full_messages_for( :role).each do |message| %>
-                        <div class="error-message"><%= message %></div>
-                      <% end %>
-                </div>
+            <div class="data">
+                <%= f.label :last_name %></br>
+                <%= f.text_field :last_name %>
+                <% @user.errors.full_messages_for( :last_name).each do |message| %>
+                    <div class="error-message"><%= message %></div>
+                  <% end %>
+            </div> 
 
-                <div class="text-area" >
-                    <%= f.label :bio %></br>
-                    <%= f.text_area :bio %>
-                    <% @user.errors.full_messages_for( :bio).each do |message| %>
-                        <div class="error-message"><%= message %></div>
-                      <% end %>
-                </div>    
+            <div class="data">
+                <%= f.label :phone_number %></br>
+                <%= f.text_field :phone_number %>
+                <% @user.errors.full_messages_for( :phone_number).each do |message| %>
+                    <div class="error-message"><%= message %></div>
+                  <% end %>
+            </div> 
+                         
+            <div class="data">
+                <%= f.label :address %></br>
+                <%= f.text_field :address %>
+                <% @user.errors.full_messages_for( :address).each do |message| %>
+                    <div class="error-message"><%= message %></div>
+                  <% end %>
+            </div> 
+
+            <div class="data" id="dob">
+            <%= f.label :dob %></br>
+            <%= f.date_select :dob, start_year: Date.today.year - 100, end_year: Date.today.year %>
+            <% @user.errors.full_messages_for( :dob).each do |message| %>
+                <div class="error-message"><%= message %></div>
+              <% end %>
+            </div> 
+
+            <div class="data">
+                <%= f.label :role %></br>
+                <%= f.text_field :role %>
+                <% @user.errors.full_messages_for( :role).each do |message| %>
+                    <div class="error-message"><%= message %></div>
+                  <% end %>
+            </div>
+
+            <div class="text-area" >
+                <%= f.label :bio %></br>
+                <%= f.text_area :bio %>
+                <% @user.errors.full_messages_for( :bio).each do |message| %>
+                    <div class="error-message"><%= message %></div>
+                  <% end %>
+            </div>    
+                     
+                <div class="btn">
+                    <%=  f.submit  %>
+                </div>           
+        <% end %>
+   
+

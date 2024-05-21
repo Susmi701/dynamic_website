@@ -1,26 +1,9 @@
 <%= stylesheet_link_tag '/form.css' %>
-
 <main class="form_main">                
-    <section class="container" >
-    <%= form_with  scope: :user,url: users_path ,local: true do |f| %>
-            <div class="text">
-                <h3>    Create User  </h3>
-            </div>  
-                <div class="data">
-                    <%= f.label :username %></br>
-                    <%= f.text_field :username %>
-                    <% @user.errors.full_messages_for( :username).each do |message| %>
-                        <div class="error-message"><%= message %></div>
-                    <% end %>                  
-                </div> 
-                
-                <%= render 'form', f: f  %>    
-                     
-            <div class="btn">
-                 <%=  f.submit "Create" %>
-            </div>
-                        
-        <% end %>
+    <section class="container" >  
+        <div class="text">
+            <h3>    Create User  </h3>
+        </div> 
+        <%= render 'form' %>
     </section>
-</main>
-
+</main> 
